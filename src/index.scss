@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+$greyBase: #f0f0f0;
+$greenBase: #c5d5c5;
+$darkAccent: #c5d5c5;
+$lightAccent: #e3e0cc;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: $greyBase;
+}
+
+div {
+  height: 100%;
+}
+
+.container {
+  display: table;
+  width: 100%;
+}
+
+.editor {
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  justify-content: center;
+  #editor {
+    display: block;
+    margin-left: 5vw;
+    margin-top: 50px;
+  }
+  textarea {
+    z-index: 1;
+    width: 40vw;
+    height: 80vh;
+    border: 5px solid darken($darkAccent, 50%);
+    border-radius: 10px;
+    //box-shadow: 2px 2px 8px 4px darken($darkAccent, 50%);
+    position: fixed;
+    resize: none;
+    &:focus {
+      background: lighten($lightAccent, 5%);
+      outline: none;
+    }
+  }
+}
+
+.min-editor {
+  width: 5%;
+  textarea {
+    display: none;
+  }
+}
+
+.preview {
+  right: 0px;
+  top: 0px;
+  width: 50%;
+  position: absolute;
+  #preview {
+    margin: 10px 10px 10px 20px;
+  }
+}
+
+.max-preview {
+  width: 100%;
+  margin-left: 80px;
+}
+
+#toolbar {
+  z-index: 2;
+  position: fixed;
+  font-size: 20px;
+}
+
+.toolbar {
+  margin-top: 30px;
+  width: 50%;
+  height: 40px;
+  width: 40vw;
+  margin-left: 5vw;
+  color: $darkAccent;
+  background: darken($darkAccent, 50%);
+  display: flex;
+  align-content: space-between;
+  p {
+    margin-left: 10px;
+    align-self: center;
+  }
+  i {
+    margin-left: auto;
+    margin-right: 10px;
+    align-self: center;
+    &:hover {
+      color: darken($lightAccent, 20%);
+      cursor: pointer;
+    }
+  }
+}
+
+.min-toolbar {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  bottom: 7px;
+  color: $darkAccent;
+  background: darken($darkAccent, 50%);
+  display: flex;
+  p {
+    display: none;
+  }
+  i {
+    position: absolute;
+    align-self: center;
+    margin-left: 15px;
+    &:hover {
+      cursor: pointer;
+      color: darken($lightAccent, 20%);
+    }
+  }
+}
