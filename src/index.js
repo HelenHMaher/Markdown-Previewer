@@ -1,5 +1,3 @@
-import "./index.scss";
-
 const Editor = (props) => {
   return (
     <textarea
